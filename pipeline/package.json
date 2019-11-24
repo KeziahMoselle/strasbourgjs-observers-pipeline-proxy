@@ -1,0 +1,13 @@
+{
+  "name": "vuestrasbourg-talk-observer-pipe",
+  "version": "1.0.0",
+  "main": "pipeline/index.js",
+  "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-proposal-pipeline-operator": "^7.7.4"
+  },
+  "scripts": {
+    "build": "babel index.js -d build --watch"
+  }
+}
