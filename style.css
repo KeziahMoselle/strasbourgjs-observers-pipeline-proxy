@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
 .on h4 {
   color: #48bb78;
 }
@@ -8,4 +14,12 @@
 
 button {
   user-select: none;
+}
+
+.card {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
