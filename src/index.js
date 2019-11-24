@@ -39,12 +39,15 @@ document.getElementById('usernameInput')
 // Loop through all our paragraphs
 for (const observerElement of document.querySelectorAll('.observer')) {
   observerElement.classList.add('on')
+  disableBtn(observerElement, '.btn-subscribe')
 
   // Click on the subscribe btn
   observerElement.querySelector('.btn-subscribe')
     .addEventListener('click', () => {
       observerElement.classList.add('on')
       observerElement.classList.remove('off')
+      disableBtn(observerElement, '.btn-subscribe')
+      enableBtn(observerElement, '.btn-unsubscribe')
     })
 
   // Click on the unsubscribe btn
@@ -52,5 +55,17 @@ for (const observerElement of document.querySelectorAll('.observer')) {
     .addEventListener('click', () => {
       observerElement.classList.add('off')
       observerElement.classList.remove('on')
+      enableBtn(observerElement, '.btn-subscribe')
+      disableBtn(observerElement, '.btn-unsubscribe')
     })
+}
+
+function disableBtn (element, selector) {
+  element.querySelector(selector)
+    .setAttribute('disabled', 'true')
+}
+
+function enableBtn (element, selector) {
+  element.querySelector(selector)
+    .removeAttribute('disabled')
 }

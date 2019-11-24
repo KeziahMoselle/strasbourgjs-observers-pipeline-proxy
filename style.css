@@ -1,7 +1,11 @@
-.on {
-  color: green;
+.on h4 {
+  color: #48bb78;
 }
 
-.off {
-  color: red;
+.off h4 {
+  color: #e53e3e;
+}
+
+button {
+  user-select: none;
 }
