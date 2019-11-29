@@ -1,6 +1,6 @@
 import Subject from './Subject.js'
 
-// Create a new instance of Observable
+// Create a new instance of Subject
 const subject = new Subject()
 
 // Loop through all our paragraphs
