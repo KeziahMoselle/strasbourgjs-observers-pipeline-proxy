@@ -1,13 +1,26 @@
-function plusOne (number) {
-  return number + 1
+function doubleSay (str) {
+  return `${str}, ${str}`
 }
 
-function plusTwo (number) {
-  return number + 2
+function capitalize (str) {
+  return str[0].toUpperCase() + str.substring(1)
 }
 
-const result = 0
-  |> plusOne
-  |> plusTwo
+function append (str, char) {
+  return str + char
+}
 
+// Now ❌
+const result = append(append(capitalize(doubleSay("hello")), '!'), '?')
+
+// Tomorrow ✔️
+const pipeResult = "hello"
+  |> doubleSay
+  |> capitalize
+  |> (_ => append(_, '!')) // Arrow functions
+  |> append(?, '?') // Partial Application proposal
+
+
+
+document.getElementById('pipe-result').innerText = pipeResult
 document.getElementById('result').innerText = result
