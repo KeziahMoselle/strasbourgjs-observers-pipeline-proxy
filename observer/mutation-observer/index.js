@@ -9,6 +9,9 @@ const options = {
 function onMutation (mutationsList, observer) {
   for (const mutation of mutationsList) {
     console.log(mutation.type)
+    // attributes
+    // characterData
+    // childList
   }
 }
 
