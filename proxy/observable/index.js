@@ -8,7 +8,7 @@ function makeObservable (target) {
   }
 
   return new Proxy(target, {
-    set (target, property, value) {
+    set (target, property, value, receiver) {
       // Reflect.set(target, property, value)
       // Equal to : target[property] = value
       const success = Reflect.set(...arguments)
