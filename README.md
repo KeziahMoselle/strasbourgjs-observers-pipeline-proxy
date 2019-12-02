@@ -1,3 +1,5 @@
+# Talk about Observers, Pipeline operator and Proxy
+
 ## Observers
 - Basic implementation of the design pattern
 - Discovery of the `MutationObserver` API
@@ -8,4 +10,4 @@
 
 ## Proxy
 - Discovery of a Proxy
-- Create a function that make an objet observable with a Proxy
+- Create a function that make an object observable with a Proxy
