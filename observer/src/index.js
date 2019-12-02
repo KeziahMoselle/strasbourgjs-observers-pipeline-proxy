@@ -3,6 +3,10 @@ import Subject from './Subject.js'
 // Create a new instance of Subject
 const subject = new Subject()
 
+// Listen to the event and notify all subscribers
+document.getElementById('usernameInput')
+  .addEventListener('keyup', event => subject.notify(event.target.value))
+
 // Loop through all our paragraphs
 for (const observerElement of document.querySelectorAll('.observer')) {
   // Create a unique function
@@ -23,10 +27,6 @@ for (const observerElement of document.querySelectorAll('.observer')) {
   observerElement.querySelector('.btn-unsubscribe')
     .addEventListener('click', () => subject.unsubscribe(update))
 }
-
-// Listen to the event and notify all subscribers
-document.getElementById('usernameInput')
-  .addEventListener('keyup', event => subject.notify(event.target.value))
 
 
 
