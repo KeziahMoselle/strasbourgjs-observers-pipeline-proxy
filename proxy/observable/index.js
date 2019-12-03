@@ -3,7 +3,7 @@ const observers = Symbol('observers')
 function makeObservable (target) {
   target[observers] = []
 
-  target.observe = function (func) {
+  target.subscribe = function (func) {
     this[observers].push(func)
   }
 
@@ -24,7 +24,7 @@ function makeObservable (target) {
 
 const user = makeObservable({})
 
-user.observe((key, value) => {
+user.subscribe((key, value) => {
   log(`[[Set]] ${key}=${value}`)
 })
 
